@@ -2,7 +2,7 @@ from flask import render_template, redirect, Blueprint, request
 from app import db
 from models.user import User
 
-user_blueprint = Blueprint("user", __name__)
+food_blueprint = Blueprint("/food", __name__)
 
 # Example of showing an individual object
 # @example_blueprint.route("/example/<id>")
@@ -10,6 +10,10 @@ user_blueprint = Blueprint("user", __name__)
 #     example_obj = Example.query.get(id)
 #     return render_template("example/show.html", example=example_obj)
 
-@user_blueprint.route("/food")
-def roll():
-    return render_template("index.jinja")
+# NEW
+@food_blueprint.route("/food/new", methods=["POST"])
+def add_food():
+    users = User.query.all()
+    return render_template("food/new.jinja", users=users)
+
+@foo
