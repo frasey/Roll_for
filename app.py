@@ -11,8 +11,9 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://eileinfraser@localhost:543
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
-# Import and Register Controllers
-from models import User, Food
+# Import models and Register Controllers
+from models.food import Food
+from models.user import User
 
 @app.route("/")
 def home():
