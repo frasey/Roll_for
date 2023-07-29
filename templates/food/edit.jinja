@@ -1,0 +1,22 @@
+{% extends 'base.jinja' %} {% block content %}
+
+<h1>Edit {{ food.name }} </h1>
+
+<form class="form-new" action="/food/show" method="post">
+    <div>
+        <label for="name">Food:</label>
+        <input type="text" name="name" id="name" value="{{ food.name }}">
+    </div>
+    <div>
+        <label for="categories">Category:</label>
+        <select name="category" id="category" value="{{ food.category }}">
+            <option value="main">Main</option>
+            <option value="fruit">Fruit</option>
+            <option value="nuts">Nuts</option>
+            <option value="extra nibble">Extra nibble</option>
+            <option value="sweet">Sweet</option>
+        </select>
+    </div>
+    <button type="submit">Update item</button>
+</form>
+{% endblock content %}

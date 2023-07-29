@@ -40,4 +40,10 @@ def show_item(id):
     food = Food.query.get(id)
     return render_template("/food/show_one.jinja", food=food)  
 
-# EDIT
+# EDIT - error - URL not found on server
+food_blueprint.route("/food/<id>/edit")
+def edit_food(id):
+    food = Food.query.get(id)
+    return render_template("/food/edit.jinja",food=food)
+
+#UPDATE
