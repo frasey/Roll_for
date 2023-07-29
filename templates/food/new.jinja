@@ -19,4 +19,9 @@
         </div>
         <button type="submit">Add food</button>
     </form>
+
+    {% for food in foods %}
+        {{ food.name}}: {{ food.category}}
+    {% endfor %}
+    
 {% endblock content %}

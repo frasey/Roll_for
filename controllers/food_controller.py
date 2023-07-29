@@ -5,12 +5,6 @@ from models.food import Food
 
 food_blueprint = Blueprint("/food", __name__)
 
-# Example of showing an individual object
-# @example_blueprint.route("/example/<id>")
-# def example_show(id):
-#     example_obj = Example.query.get(id)
-#     return render_template("example/show.html", example=example_obj)
-
 # NEW
 @food_blueprint.route("/food/new")
 def add_food():
@@ -42,7 +36,7 @@ def show_item(id):
 
 # EDIT
 @food_blueprint.route("/food/<id>/edit")
-def check(id):
+def edit_food(id):
     food = Food.query.get(id)
     return render_template("food/edit.jinja", food=food)
 
@@ -60,13 +54,15 @@ def update_food(id):
     db.session.commit()
     return redirect("/food/show")
 
-# # DELETE
-# @food_blueprint.route("/food/<id>/delete", methods=['POST'])
-# def delete_food(id):
-#     Food.query.filter_by(id = id).delete
-#     db.session.commit()
-#     return redirect("food/show")
+# DELETE
+@food_blueprint.route("/food/<id>/delete")
+def check(id):
+    food = Food.query.get(id)
+    db.session.delete(food)
+    db.session.commit()
+    return redirect("/food/show")
 
+# INFO PAGE
 @food_blueprint.route("/food/tips")
 def tips():
-    return f"Hello"
+    return render_template("/food/tips.jinja")
