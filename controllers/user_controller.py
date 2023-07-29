@@ -4,12 +4,23 @@ from models.user import User
 
 user_blueprint = Blueprint("user", __name__)
 
-# Example of showing an individual object
-# @example_blueprint.route("/example/<id>")
-# def example_show(id):
-#     example_obj = Example.query.get(id)
-#     return render_template("example/show.html", example=example_obj)
-
+#HOMPAGE WHERE USER CAN GET RANDOM OUTPUT
 @user_blueprint.route("/food")
 def roll():
     return render_template("index.jinja")
+
+# NEW USER
+@user_blueprint.route("/food/new_user")
+def add_user():
+    users = User.query.all()
+    return render_template("user/new.jinja", users=users)
+
+# ADD USER
+@user_blueprint.route("/food", methods=["POST"])
+def create_new_item():
+    name = request.form["name"]
+
+    name = User(name=name)
+    db.session.add(name)
+    db.session.commit()
+    return redirect("/food")

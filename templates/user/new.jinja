@@ -1,0 +1,11 @@
+{% extends 'base.jinja' %} {% block content %}
+
+<form class="form-new-user" action="/food" method="post">
+    <div>
+        <label for="name">Username:</label>
+        <input type="text" name="name" id="name">
+    </div>
+    <button type="submit">Register</button>
+</form>
+
+{% endblock content %}
