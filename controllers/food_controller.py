@@ -17,6 +17,7 @@ def add_food():
     users = User.query.all()
     return render_template("food/new.jinja", users=users)
 
+# SHOW ITEM ADDED
 @food_blueprint.route("/food/show", methods=["POST"])
 def create_new_item():
     name = request.form["name"]
@@ -27,7 +28,16 @@ def create_new_item():
     db.session.commit()
     return redirect("/food/show")
 
+# SHOW ALL
 @food_blueprint.route("/food/show")
 def all_food():
     foods = Food.query.all()
     return render_template("/food/show.jinja", foods=foods)
+
+# SHOW ONE ITEM
+@food_blueprint.route("/food/<id>")
+def show_item(id):
+    food = Food.query.get(id)
+    return render_template("/food/show_one.jinja", food=food)  
+
+# EDIT

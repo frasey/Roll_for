@@ -1,0 +1,9 @@
+{% extends 'base.jinja' %}  {% block content %}
+
+<div>
+    <h1>{{ food.name }}</h1>
+    <p>{{ food.category }}</p>
+    <a href="/food/{{ food.id }}/edit">Edit</a>
+</div>
+    
+{% endblock content %}

@@ -7,4 +7,4 @@ class Food(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
 
     def __repr__(self):
-        return f"<Food: {self.name}, {self.type}>"
+        return f"<Food: {self.name}, {self.category}>"
