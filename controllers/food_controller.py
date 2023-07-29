@@ -43,12 +43,11 @@ def show_item(id):
 # EDIT - error - URL not found on server
 food_blueprint.route("/food/<id>/edit")
 def edit_food(id):
-    user = User.query.all()
     food = Food.query.get(id)
-    return render_template("/food/edit.jinja",food=food, user=user)
+    return render_template("/food/edit.jinja",food=food)
 
 #UPDATE ITEM
-@food_blueprint.route("/food/<id>", methods=["POST"])
+@food_blueprint.route("/food/<id>", methods=['POST'])
 def update_food(id):
     name = request.form["name"]
     category = request.form["category"]
@@ -60,3 +59,10 @@ def update_food(id):
 
     db.session.commit()
     return redirect("/food/show")
+
+# DELETE
+@food_blueprint.route("/food/<id>/delete", methods=['POST'])
+def delete_food(id):
+    Food.query.filter_by(id = id).delete
+    db.session.commit()
+    return redirect("food/show")
