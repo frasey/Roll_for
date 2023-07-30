@@ -1,14 +1,15 @@
 {% extends 'base.jinja' %}{% block content %}
 
-<h2>Not sure? Check out these <a href="/food/tips">tips</a></h2>
+<section class="container"> 
+    <h2 class="new-title">Not sure? Check out our <span class="new-title__tips">tips</span> > <a class="new-title__link" href="/food/tips"></a></h2>
 
-    <form class="form-new" action="/food/show" method="post">
+    <form class="new-form" action="/food/show" method="post">
         <div>
-            <label for="name">Food:</label>
+            <label class="new-form__label" for="name">Food:</label>
             <input type="text" name="name" id="name">
         </div>
         <div>
-            <label for="categories">Category:</label>
+            <label class="new-form__label" for="categories">Category:</label>
                 <select name="category" id="category">
                     <option value="main">Main</option>
                     <option value="fruit">Fruit</option>
@@ -17,8 +18,10 @@
                     <option value="sweet">Sweet</option>
                 </select>
         </div>
-        <button type="submit">Add food</button>
+        <button class="new__button" type="submit">Add food</button>
     </form>
+
+</section>
 
     {% for food in foods %}
         {{ food.name}}: {{ food.category}}

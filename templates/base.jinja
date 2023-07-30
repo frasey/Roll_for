@@ -3,18 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {# <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> #}
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/707e36b538.js" crossorigin="anonymous"></script>
     <title>Roll for</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"
     />
   </head>
 
   <body>
-    <header>
+    <header class="header">
+      <div class="header__logo">
+        <i class="fa-solid fa-dice-d20 fa-2xl nav-bar__logo" style="color: #0feba9;" aria-hidden=""></i>
+      </div>
       <nav>
-        <ul>
-          <li><a href="/food">Home</a></li>
-          <li><a href="/food/new">Add</a></li>
-          <li><a href="/food/tips">Tips</a></li>
+        <ul class="menu">
+          <li class="menu__list"><a href="/food">Home</a></li>
+          <li class="menu__list"><a href="/food/new">Add</a></li>
+          <li class="menu__list"><a href="/food/tips">Tips</a></li>
         </ul>
       </nav>
     </header>
