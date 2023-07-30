@@ -42,18 +42,21 @@ a:visited {
   padding-bottom: 20px;
   display: flex;
   flex-direction: row;
+  gap: 20px;
+
 }
 
 .menu__list {
-  padding-left: 20px;
+  padding: 0, 40px;
   height: 38px;
-  width: 40px;
-  text-align:justify;
+  width: 60px;
+  text-align:center;
   line-height: 38px;
   background-color: #E4A8FF;
   color: #29282A;
   border: none;
   border-radius: 8px;
+  
 }
 
 
@@ -106,7 +109,15 @@ a:visited {
 }
 
 .new-title__tips {
-  color: #E4A8FF;
+  height: 38px;
+  width: 120px;
+  text-align: center;
+  line-height: 38px;
+  background-color: #E4A8FF;
+  color: #29282A;
+  border: none;
+  border-radius: 8px;
+  padding: 0 20px;
 }
 
 .new-form__label {
@@ -123,4 +134,5 @@ a:visited {
   border: none;
   border-radius: 8px;
   margin-top: 50px;
+  font-weight: bold;
 }

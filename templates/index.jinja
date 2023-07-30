@@ -18,7 +18,19 @@
         <h2>New roll</h2>
     </div>
     <div>
-    {# Need field outputs from Food table #}
+        <ul>
+           <li>{% for food in foods %}
+            {{ food.name }}
+           {% endfor %}</li>
+        </ul>
+        
+        <p>here is more text</p>
+        <p>here is more text</p>
+        <p>here is more text</p>
+        <p>here is more text</p>
+        <p>here is more text</p>
+        <p>here is more text</p>
+        <p>here is more text</p>
     </div>
 </section>
 

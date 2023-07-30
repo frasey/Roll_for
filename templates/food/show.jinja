@@ -1,7 +1,13 @@
 {% extends 'base.jinja' %} {% block content %}
 
-    {% for food in foods %}
-        {{ food.name}}: {{ food.category}}
-    {% endfor %}
+<div>
+    <ul>
+        <li>
+            {% for food in foods %}
+                {{ food.name}}: {{ food.category}}
+            {% endfor %}
+        </li>
+    </ul>
+</div>
     
 {% endblock content %}

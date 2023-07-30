@@ -5,6 +5,18 @@ from models.food import Food
 
 food_blueprint = Blueprint("/food", __name__)
 
+# RANDOMISED ITEMS
+# @food_blueprint.route("/food")
+# def output_random():
+#     food = Food.query.all()
+#     return render_template("index.jinja", food=food)
+
+#?
+@food_blueprint.route("/food/list")
+def output_random():
+    food = Food.query.all()
+    return render_template("food/list.jinja", food=food)
+
 # NEW
 @food_blueprint.route("/food/new")
 def add_food():
@@ -34,12 +46,6 @@ def show_item(id):
     food = Food.query.get(id)
     return render_template("/food/show_one.jinja", food=food)  
 
-# EDIT
-@food_blueprint.route("/food/<id>/edit")
-def edit_food(id):
-    food = Food.query.get(id)
-    return render_template("food/edit.jinja", food=food)
-
 #UPDATE ITEM
 @food_blueprint.route("/food/<id>", methods=['POST'])
 def update_food(id):
@@ -53,6 +59,12 @@ def update_food(id):
 
     db.session.commit()
     return redirect("/food/show")
+
+# EDIT
+@food_blueprint.route("/food/<id>/edit")
+def edit_food(id):
+    food = Food.query.get(id)
+    return render_template("food/edit.jinja", food=food)
 
 # DELETE
 @food_blueprint.route("/food/<id>/delete")
