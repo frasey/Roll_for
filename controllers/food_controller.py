@@ -44,7 +44,11 @@ def create_new_item():
 @food_blueprint.route("/food/show")
 def all_food():
     foods = Food.query.all()
-    return render_template("/food/show.jinja", foods=foods)
+    main = Food.query.filter_by(category = "main").all()
+    print(main)
+    fruit = Food.query.filter_by(category = "fruit").all()
+    print(fruit)
+    return render_template("/food/show.jinja", foods=foods, main=main, fruit=fruit)
 
 # SHOW ONE ITEM
 @food_blueprint.route("/food/<id>")

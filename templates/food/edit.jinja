@@ -4,18 +4,18 @@
 
 <form class="edit-form" action="/food/{{ food.id }}" method="post">
     <div>
-            <label class="new-form__label" for="user">Username:</label>
-            <select name="user_id" id="user">
-                {% for user in users %}
-                    <option value="{{ user.id }}">{{ user.name }}</option>
-                {% endfor %}
-            </select>
-        </div>
-        <label for="name">Food:</label>
-        <input type="text" name="name" id="name" value="{{ food.name }}">
+        <label class="edit-form__label" for="user">Username:</label>
+        <select name="user_id" id="user">
+            {% for user in users %}
+                <option value="{{ user.id }}">{{ user.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <label class="edit-form__label" for="name">Food:</label>
+    <input type="text" name="name" id="name" value="{{ food.name }}">
     </div>
     <div>
-        <label for="categories">Category:</label>
+        <label class="edit-form__label" for="categories">Category:</label>
         <select name="category" id="category" value="{{ food.category }}">
             <option value="main">Main</option>
             <option value="fruit">Fruit</option>

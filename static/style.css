@@ -30,7 +30,6 @@ a:visited {
 
 
 /* Base */
-
 .header {
   display: flex;
   justify-content: space-around;
@@ -60,7 +59,6 @@ a:visited {
 
 
 /* Hero section */
-
 .hero-wrapper {
   display: flex;
   flex-direction: column;
@@ -174,6 +172,11 @@ a:visited {
 
 
 /* Show all list */
+.food-list {
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+}
 
 .food-list__items a {
   color:#E4A8FF;
@@ -186,3 +189,35 @@ a:visited {
 
 /* edit */
 
+.edit-title {
+  margin: 0 0 30px 170px;
+
+}
+
+.edit-form {
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.edit-submit-btn {
+  margin: 20px;
+  height: 38px;
+  width: 120px;
+  border: none;
+  border-radius: 8px;
+  background-color: #E4A8FF;
+  color: #29282A;
+  font-size: 18px;
+}
+
+.edit-delete-btn {
+  height: 38px;
+  width: 38px;
+  line-height: 38px;
+  background-color: #E85545;
+  color:#29282A;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+}
