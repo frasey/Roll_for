@@ -5,9 +5,9 @@ from models.user import User
 user_blueprint = Blueprint("user", __name__)
 
 #HOMPAGE WHERE USER CAN GET RANDOM OUTPUT
-@user_blueprint.route("/food")
-def roll():
-    return render_template("index.jinja")
+# @user_blueprint.route("/food")
+# def roll():
+#     return render_template("index.jinja")
 
 # NEW USER
 @user_blueprint.route("/food/new_user")

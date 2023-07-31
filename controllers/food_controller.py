@@ -2,20 +2,25 @@ from flask import render_template, redirect, Blueprint, request
 from app import db
 from models.user import User
 from models.food import Food
+from sqlalchemy.sql.expression import func
+import random
 
 food_blueprint = Blueprint("/food", __name__)
 
 # RANDOMISED ITEMS
-# @food_blueprint.route("/food")
-# def output_random():
-#     food = Food.query.all()
-#     return render_template("index.jinja", food=food)
-
-#?
-@food_blueprint.route("/food/list")
+@food_blueprint.route("/food")
 def output_random():
-    food = Food.query.all()
-    return render_template("food/list.jinja", food=food)
+    main = random.choice(Food.query.filter_by(category = "main").all())
+    print(main)
+    fruit = random.choice(Food.query.filter_by(category = "fruit").all())
+    print(fruit)
+    nuts = random.choice(Food.query.filter_by(category = "nuts").all())
+    print(nuts)
+    nibble = random.choice(Food.query.filter_by(category = "extra nibble").all())
+    print(nibble)
+    sweet = random.choice(Food.query.filter_by(category = "sweet").all())
+    print(sweet)
+    return render_template("index.jinja", main=main,  fruit=fruit, nuts=nuts, nibble=nibble, sweet=sweet)
 
 # NEW
 @food_blueprint.route("/food/new")

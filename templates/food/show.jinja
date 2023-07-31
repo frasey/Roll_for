@@ -1,10 +1,10 @@
 {% extends 'base.jinja' %} {% block content %}
 
-<div>
-    <ul>
-        <li>
+<div class="container">
+    <ul class="food-list">
+        <li class="food-list__items">
             {% for food in foods %}
-                {{ food.name}}: {{ food.category}}
+                <a href="food/{{ food.id }}/edit">{{ food.name }}: {{ food.category }}</a>             
             {% endfor %}
         </li>
     </ul>
