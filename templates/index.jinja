@@ -3,36 +3,40 @@
 
 <section class="hero">
     <div class="container hero-wrapper">
-        <img class="hero__image" src="static/dice.png"/>
-        <h1 class="hero-title">ROLL FOR <hr>
-            <span class="hero-title__span">(LUNCH)</span></h1>
+        <img class="hero__image" src="static/dice.png" />
+        <h1 class="hero-title">ROLL FOR
+            <hr>
+            <span class="hero-title__span">(LUNCH)</span>
+        </h1>
         <p class="hero__paragraph">Simple. Quick. Tasty.</p>
     </div>
     <div class="container hero-buttons">
         <a class="hero__button" href="food/new_user">New user</a>
-        <a class="hero__button" href="food/new">Add new food</a> 
+        <a class="hero__button" href="food/new">Add new food</a>
     </div>
 </section>
 <section class="container">
     <div class="new-roll">
-    <div>
-        <h2 class="new-roll__title">New roll</h2>
-    </div>
-    <div>
-        <ul class="new-roll__list">
-            <li><b class="new-roll__list--category">{{ main.category }}:</b> {{ main.name }}</li>
-            <li><b class="new-roll__list--category">{{ fruit.category}}:</b> {{ fruit.name}}</li>
-            <li><b class="new-roll__list--category">{{ nuts.category}}:</b> {{ nuts.name }}</li>
-            <li><b class="new-roll__list--category">{{ nibble.category}}:</b> {{ nibble.name }}</li>
-            <li><b class="new-roll__list--category">{{ sweet.category}}:</b> {{ sweet.name }}</li>
-        </ul>
-    </div>
+        <div>
+            <h2 class="new-roll__title">New roll</h2>
+        </div>
+        <div>
+            <ul class="new-roll__list">
+                <li><b class="new-roll__list--category">{{ main.category }}:</b> {{ main.name }}</li>
+                <li><b class="new-roll__list--category">{{ fruit.category}}:</b> {{ fruit.name}}</li>
+                <li><b class="new-roll__list--category">{{ nuts.category}}:</b> {{ nuts.name }}</li>
+                <li><b class="new-roll__list--category">{{ nibble.category}}:</b> {{ nibble.name }}</li>
+                <li><b class="new-roll__list--category">{{ sweet.category}}:</b> {{ sweet.name }}</li>
+            </ul>
+            <a class="new-roll__button" href="/food">Roll again?</a>
+        </div>
+        <div>
+        {# Need shopping list button #}
+        </div>
     </div>
 </section>
 
 
-
-{# Need roll again button #}
-{# Need shopping list button #}
+{# Need to get the user involved but without breaking random #}
 
 {% endblock content %}

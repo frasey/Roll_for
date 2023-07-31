@@ -5,6 +5,14 @@
 
     <form class="new-form" action="/food/show" method="post">
         <div>
+            <label class="new-form__label" for="user">Username:</label>
+            <select name="user_id" id="user">
+                {% for user in users %}
+                    <option value="{{ user.id }}">{{ user.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
             <label class="new-form__label" for="name">Food:</label>
             <input type="text" name="name" id="name" required>
         </div>

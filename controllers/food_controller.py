@@ -31,10 +31,11 @@ def add_food():
 # SHOW ITEM ADDED
 @food_blueprint.route("/food/show", methods=["POST"])
 def create_new_item():
+    user_id = request.form["user_id"]
     name = request.form["name"]
     category = request.form["category"]
 
-    food = Food(name=name, category=category)
+    food = Food(name=name, category=category, user_id=user_id)
     db.session.add(food)
     db.session.commit()
     return redirect("/food/show")
@@ -54,11 +55,13 @@ def show_item(id):
 #UPDATE ITEM
 @food_blueprint.route("/food/<id>", methods=['POST'])
 def update_food(id):
+    user_id = request.form["user_id"]
     name = request.form["name"]
     category = request.form["category"]
 
     food = Food.query.get(id)
 
+    food.user_id = user_id
     food.name = name
     food.category = category
 
