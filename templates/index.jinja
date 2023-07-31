@@ -12,9 +12,9 @@
     </div>
     <div class="container hero-buttons">
         <a class="hero__button" href="food/new_user">New user</a>
-        <select name="user_id" id="user">
+        <select name="user" id="user">
             {% for user in users %}
-                <option value="{{ user.id }}">{{ user.name }}</option>
+                <option>{{ user.name }}</option>
             {% endfor %}
         </select>
         <a class="hero__button" href="food/new">Add new food</a>

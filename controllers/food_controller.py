@@ -22,6 +22,12 @@ def output_random():
     print(sweet)
     return render_template("index.jinja", main=main,  fruit=fruit, nuts=nuts, nibble=nibble, sweet=sweet)
 
+# ROLL FOR USER
+@food_blueprint.route("/food")
+def roll_for_user(users):
+    users = Users.query.all()
+    return render_template("index.jinja", users=users)
+
 # NEW
 @food_blueprint.route("/food/new")
 def add_food():
@@ -40,12 +46,6 @@ def create_new_item():
     db.session.add(food)
     db.session.commit()
     return redirect("/food/show")
-
-# ROLL FOR USER
-@food_blueprint.route("/food")
-def roll_for_user(users):
-    users = Users.query.all()
-    return render_template("index.jinja", users=users)
 
 # SHOW ALL
 @food_blueprint.route("/food/show")
