@@ -34,11 +34,18 @@ def create_new_item():
     user_id = request.form["user_id"]
     name = request.form["name"]
     category = request.form["category"]
+    ingredients = request.form["ingredients"]
 
-    food = Food(name=name, category=category, user_id=user_id)
+    food = Food(name=name, category=category, user_id=user_id, ingredients=ingredients)
     db.session.add(food)
     db.session.commit()
     return redirect("/food/show")
+
+# ROLL FOR USER
+@food_blueprint.route("/food")
+def roll_for_user(users):
+    users = Users.query.all()
+    return render_template("index.jinja", users=users)
 
 # SHOW ALL
 @food_blueprint.route("/food/show")
@@ -62,12 +69,14 @@ def update_food(id):
     user_id = request.form["user_id"]
     name = request.form["name"]
     category = request.form["category"]
+    ingredients = request.form["ingredients"]
 
     food = Food.query.get(id)
 
     food.user_id = user_id
     food.name = name
     food.category = category
+    food.ingredients = ingredients
 
     db.session.commit()
     return redirect("/food/show")

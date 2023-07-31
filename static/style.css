@@ -94,6 +94,10 @@ a:visited {
   margin-left: 20px;
 }
 
+.hero__paragraph {
+  padding-bottom: 20px;
+}
+
 
 /* New roll */
 .new-roll {
@@ -120,15 +124,30 @@ a:visited {
 
 .new-roll__button {
   height: 38px;
-  width: 50px;
+  width: 100px;
   margin-left: 50px;
-  margin-top:40px;
+  margin-top:20px;
   text-align: center;
+  line-height: 38px;
   background-color: #C756FB;
   color: #29282A;
   border: none;
   border-radius: 6px;
   text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.shoppinglist-title {
+  margin-left: 80px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color:#0feba9;
+}
+
+.shoppinglist-list {
+  margin-left: 80px;
+  margin-bottom: 50px;
 }
 
 /* Add new */
@@ -168,6 +187,12 @@ a:visited {
   border-radius: 8px;
   margin-top: 50px;
   font-weight: bold;
+}
+
+.ingredients_exp {
+  margin-top: 20px;
+  font-weight: lighter;
+  font-style: italic;
 }
 
 

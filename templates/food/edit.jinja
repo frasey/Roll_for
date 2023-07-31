@@ -17,6 +17,10 @@
     <input type="text" name="name" id="name" value="{{ food.name }}">
     </div>
     <div>
+        <label class="new-form__label" for="ingredients">Ingredients:</label>
+        <input type="text" name="ingredients" id="ingredients" value="{{ food.ingredients }}">
+    </div>
+    <div>
         <label class="edit-form__label" for="categories">Category:</label>
         <select name="category" id="category" value="{{ food.category }}">
             <option value="main">Main</option>

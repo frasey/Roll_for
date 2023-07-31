@@ -12,6 +12,11 @@
     </div>
     <div class="container hero-buttons">
         <a class="hero__button" href="food/new_user">New user</a>
+        <select name="user_id" id="user">
+            {% for user in users %}
+                <option value="{{ user.id }}">{{ user.name }}</option>
+            {% endfor %}
+        </select>
         <a class="hero__button" href="food/new">Add new food</a>
     </div>
 </section>
@@ -30,13 +35,14 @@
             </ul>
             <a class="new-roll__button" href="/food">Roll again?</a>
         </div>
-        <div>
-        {# Need shopping list button #}
-        </div>
     </div>
 </section>
-
-
-{# Need to get the user involved but without breaking random #}
+<div>
+    <h2 class="shoppinglist-title">Shopping List:</h2>
+    <ul class="shoppinglist-list">
+        <li class="shoppinglist-items">{{main.ingredients}}, {{ fruit.ingredients }}, {{ nuts.ingredients }}, {{ nibble.ingredients }}, {{
+            sweet.ingredients }}</li>
+    </ul>
+</div>
 
 {% endblock content %}
