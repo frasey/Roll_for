@@ -76,7 +76,8 @@ def update_food(id):
 @food_blueprint.route("/food/<id>/edit")
 def edit_food(id):
     food = Food.query.get(id)
-    return render_template("food/edit.jinja", food=food)
+    users = User.query.all()
+    return render_template("food/edit.jinja", food=food, users=users)
 
 # DELETE
 @food_blueprint.route("/food/<id>/delete")

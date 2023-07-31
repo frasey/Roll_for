@@ -7,7 +7,9 @@
         <label class="edit-form__label" for="user">Username:</label>
         <select name="user_id" id="user">
             {% for user in users %}
-                <option value="{{ user.id }}">{{ user.name }}</option>
+                <option {% if user.id == food.user_id %}
+                    selected
+                {% endif %}value="{{ user.id }}">{{ user.name }}</option>
             {% endfor %}
         </select>
     </div>
@@ -24,8 +26,10 @@
             <option value="sweet">Sweet</option>
         </select>
     </div>
-    <button class="edit-submit-btn" type="submit">Update item</button>
-    <a class="edit-delete-btn" href="/food/{{ food.id }}/delete">Delete</a>
+    <div>
+        <button class="edit-submit-btn" type="submit">Update item</button>
+        <a class="edit-delete-btn" href="/food/{{ food.id }}/delete">Delete</a>
+    </div>
 </form>
 
 {% endblock content %}
