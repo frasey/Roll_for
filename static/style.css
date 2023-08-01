@@ -309,10 +309,30 @@ a:visited {
   margin-bottom: 30px;
 }
 
-.tips__text {
+.tips__barriers {
   margin-left: 100px;
+  margin-bottom: 40px;
+}
+
+.tips__barriers-title {
+  font-weight: bold;
+  text-decoration: underline;
+  color:#E4A8FF;
+  margin-bottom: 10px;
 }
 
 .tips__list {
   margin-left: 100px;
+}
+
+.tips__list-title {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #0feba9;
+  margin-bottom: 10px;
+}
+
+.tips__list-item {
+    margin-top: 10px;
+    margin-left: 20px
 }
