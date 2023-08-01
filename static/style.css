@@ -273,3 +273,20 @@ a:visited {
 .user-list__items a:visited {
   color: #E4A8FF;
 }
+
+/* New user */
+.form-new-user {
+  margin-left: 50px;
+}
+
+.form-new-user__button {
+  margin-top: 30px;
+  margin-left: 100px;
+  background-color: #E4A8FF;
+  color: #29282A;
+  height: 38px;
+  width: 80px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
