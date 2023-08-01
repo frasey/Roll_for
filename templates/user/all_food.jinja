@@ -6,7 +6,7 @@
         <li class="user-list__items">
             {% for food in foods %}
                 {% if user.id == food.user_id %}
-                    <a href="/{{ food.id }}/edit">{{ food.name}}: {{ food.catergory }}</a>
+                    <a href="/food/{{ food.id }}/edit">{{ food.name}}: {{ food.catergory }}</a>
                 {% endif %}
             {% endfor %}
         </li>
