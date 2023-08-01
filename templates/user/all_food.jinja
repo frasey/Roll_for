@@ -4,9 +4,23 @@
     <h1 class="user-list__title">{{ user.name }}</h1>
     <ul class="user-list">
         <li class="user-list__items">
-            {% for food in foods %}
+            {% for food in foods if food.category == "fruit" %}
                 {% if user.id == food.user_id %}
-                    <a href="/food/{{ food.id }}/edit">{{ food.name}}: {{ food.catergory }}</a>
+                    <a href="/food/{{ food.id }}/edit">{{ food.name}}: {{ food.category }}</a>
+                {% endif %}
+            {% endfor %}
+        </li>
+        <li>
+            {% for food in foods if food.category == "main" %}
+                {% if user.id == food.user_id %}
+                    <a href="/food/{{ food.id }}/edit">{{ food.name }}: {{ food.category }}</a>   
+                {% endif %}
+            {% endfor %}
+        </li>
+                <li>
+            {% for food in foods if food.category == "nuts" %}
+                {% if user.id == food.user_id %}
+                    <a href="/food/{{ food.id }}/edit">{{ food.name }}: {{ food.category }}</a>   
                 {% endif %}
             {% endfor %}
         </li>

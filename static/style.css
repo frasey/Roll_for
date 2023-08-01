@@ -290,3 +290,8 @@ a:visited {
   border-radius: 8px;
   font-weight: bold;
 }
+
+/* user list */
+.user-list__title {
+  margin-bottom: 20px;
+}
