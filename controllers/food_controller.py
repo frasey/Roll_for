@@ -2,32 +2,30 @@ from flask import render_template, redirect, Blueprint, request
 from app import db
 from models.user import User
 from models.food import Food
-from sqlalchemy.sql.expression import func
 import random
 
 food_blueprint = Blueprint("/food", __name__)
 
 # RANDOMISED ITEMS
-@food_blueprint.route("/food")
+@food_blueprint.route("/food", methods=["GET"])
 def output_random():
-    main = random.choice(Food.query.filter_by(category = "main").all())
-    print(main)
-    fruit = random.choice(Food.query.filter_by(category = "fruit").all())
-    print(fruit)
-    nuts = random.choice(Food.query.filter_by(category = "nuts").all())
-    print(nuts)
-    nibble = random.choice(Food.query.filter_by(category = "extra nibble").all())
-    print(nibble)
-    sweet = random.choice(Food.query.filter_by(category = "sweet").all())
-    print(sweet)
-    return render_template("index.jinja", main=main,  fruit=fruit, nuts=nuts, nibble=nibble, sweet=sweet)
-
-# ROLL FOR USER
-@food_blueprint.route("/food")
-def roll_for_user(users):
-    users = Users.query.all()
-    return render_template("index.jinja", users=users)
-
+    users = User.query.all()
+    args = request.args
+    user_id = args.get("user")
+    user = User.query.get(user_id)
+    if user_id:
+        food = Food.query.filter_by(user_id = user_id)
+        meal_names = ["main", "fruit", "nuts", "extra nibble", "sweet"]
+        meals = []
+        for meal_name in meal_names:
+            filtered_meals = food.filter_by(category = meal_name).all()
+            if len(filtered_meals) >= 1:
+                meal = random.choice(filtered_meals)
+                meals.append(meal)
+        return render_template("index.jinja", user_id=user_id, users=users, meals=meals)
+    else:
+        return render_template("index.jinja", user_id=user_id, users=users)
+    
 # NEW
 @food_blueprint.route("/food/new")
 def add_food():

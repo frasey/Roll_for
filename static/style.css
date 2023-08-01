@@ -110,6 +110,12 @@ a:visited {
   margin: 0 30px 20px 0;
 }
 
+.new-roll__dropdown {
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+}
+
 .new-roll__list {
   padding-left: 20px;
 }
@@ -122,10 +128,11 @@ a:visited {
   color: #0feba9;
 }
 
+
 .new-roll__button {
   height: 38px;
   width: 100px;
-  margin-left: 50px;
+  margin-right: 20px;
   margin-top:20px;
   text-align: center;
   line-height: 38px;
@@ -245,4 +252,24 @@ a:visited {
   border-radius: 8px;
   display: inline-block;
   text-align: center;
+}
+
+
+/* User food list */
+
+.user-list__title {
+  margin-left: 50px;
+}
+
+.user-list {
+  font-size: large;
+  margin-left: 50px;
+}
+
+.user-list__items a {
+  color:#E4A8FF;
+}
+
+.user-list__items a:visited {
+  color: #E4A8FF;
 }
