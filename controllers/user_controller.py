@@ -25,6 +25,6 @@ def create_new_item():
 @user_blueprint.route("/users/<id>")
 def all_user_food(id):
     user = User.query.get(id)
-    foods = Food.query.all()
+    foods = Food.query.filter_by(user_id = id)
     return render_template("/user/all_food.jinja", user=user, foods=foods)
 

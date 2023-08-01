@@ -44,7 +44,7 @@ def create_new_item():
     food = Food(name=name, category=category, user_id=user_id, ingredients=ingredients)
     db.session.add(food)
     db.session.commit()
-    return redirect("/food/show")
+    return redirect(f"/users/{ user_id }")
 
 # SHOW ALL
 @food_blueprint.route("/food/show")
