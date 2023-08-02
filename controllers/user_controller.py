@@ -39,11 +39,16 @@ def update_user():
     db.session.commit()
     return redirect("/food")
 
+# LIST OF USERS
+@user_blueprint.route("/users/all")
+def users():
+    users = User.query.all()
+    return render_template("user/list.jinja", users=users)
+
 # EDIT
 @user_blueprint.route("/users/<id>/edit")
 def edit_user(id):
     user = User.query.get(id)
-    # username = User.name
     return render_template("user/edit.jinja", user=user)
 
 # DELETE USER

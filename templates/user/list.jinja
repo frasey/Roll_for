@@ -1,0 +1,9 @@
+{% extends 'base.jinja' %} {% block content %}
+
+    <div class="user-food-list">
+        {% for user in  users%}
+        <a class="user-food-list__link" href="/users/{{ user.id }}">{{ user.name }}</a>
+        {% endfor %}
+    </div>
+{% endblock content %}
+

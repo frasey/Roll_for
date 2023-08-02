@@ -17,10 +17,6 @@ li {
   list-style: none;
 }
 
-a:visited {
-  color: #29282A;
-}
-
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -46,7 +42,6 @@ a:visited {
 }
 
 .menu__list {
-  padding: 0, 40px;
   height: 38px;
   width: 60px;
   text-align:center;
@@ -55,6 +50,26 @@ a:visited {
   color: #29282A;
   border: none;
   border-radius: 8px;
+}
+
+.menu__list a:visited {
+  color: #29282A;
+}
+
+.menu__list-cu {
+  height: 38px;
+  width: 150px;
+  text-align:center;
+  line-height: 38px;
+  background-color: #E4A8FF;
+  color: #29282A;
+  border: none;
+  border-radius: 8px;
+  text-decoration: underline;
+}
+
+.menu__list-cu a:visited {
+  color: #29282A;
 }
 
 
@@ -350,4 +365,21 @@ a:visited {
 .tips__list-item {
     margin-top: 10px;
     margin-left: 20px
+}
+
+.user-food-list {
+  margin-top: 40px;
+  margin-left: 100px;
+  color:#E4A8FF;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-food-list__link {
+  color:#E4A8FF;
+  padding: 10px;
+}
+
+.user-food-list__link a:visited {
+  color:#E4A8FF;
 }
