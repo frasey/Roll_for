@@ -23,11 +23,11 @@
     <div>
         <label class="edit-form__label" for="categories">Category:</label>
         <select name="category" id="category" value="{{ food.category }}">
-            <option value="main">Main</option>
-            <option value="fruit">Fruit</option>
-            <option value="nuts">Nuts</option>
-            <option value="extra nibble">Extra nibble</option>
-            <option value="sweet" {% if food.category == "sweet"%} selected {% endif %}>Sweet</option>
+            <option value="main" {% if food.category == "main" %} selected {% endif %}>Main</option>
+            <option value="fruit" {% if food.category == "fruit" %} selected {% endif %}>Fruit</option>
+            <option value="nuts" {% if food.category == "nuts" %} selected {% endif %}>Nuts</option>
+            <option value="extra nibble" {% if food.category == "extra nibble" %} selected {% endif %}>Extra nibble</option>
+            <option value="sweet" {% if food.category == "sweet" %} selected {% endif %}>Sweet</option>
         </select>
     </div>
     <div>
