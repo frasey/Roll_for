@@ -303,10 +303,12 @@ a:visited {
 }
 
 .user-delete-btn {
+  margin-top: 40px;
+  margin-left: 100px;
   height: 38px;
-  width: 60px;
+  width: 180px;
   line-height: 38px;
-  background-color: #E85545;
+  background-color: #0feba9;
   color:#29282A;
   text-decoration: none;
   border: none;

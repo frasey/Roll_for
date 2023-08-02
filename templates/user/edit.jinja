@@ -1,0 +1,12 @@
+{% extends 'base.jinja' %} {% block content %}
+
+<form class="form-edit-user" action="/users/{{ user.id }}" method="post">
+    <div>
+        <label for="name">Username:</label>
+        <input type="text" name="name" id="name">
+    </div>
+    <button class="form-new-user__button" type="submit">Update</button>
+    <a class="user-delete-btn" href="/user/{{ user.id }}/delete">Delete</a>
+</form>
+
+{% endblock content %}
