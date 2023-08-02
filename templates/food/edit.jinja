@@ -9,7 +9,7 @@
             {% for user in users %}
                 <option {% if user.id == food.user_id %}
                     selected
-                {% endif %}value="{{ user.id }}">{{ user.name }}</option>
+                {% endif %} value="{{ user.id }}">{{ user.name }}</option>
             {% endfor %}
         </select>
     </div>

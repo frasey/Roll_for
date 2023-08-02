@@ -13,7 +13,7 @@ def add_user():
 
 # ADD USER
 @user_blueprint.route("/food", methods=["POST"])
-def create_new_item():
+def create_new_user():
     name = request.form["name"]
 
     name = User(name=name)
@@ -28,16 +28,28 @@ def all_user_food(id):
     foods = Food.query.filter_by(user_id = id)
     return render_template("/user/all_food.jinja", user=user, foods=foods)
 
-EDIT
+# UPDATE USER
+@user_blueprint.route("/users/<id>", methods=["POST"])
+def update_user():
+    name = request.form["name"]
+
+    user = User.query.get(name)
+
+    db.session.add(user)
+    db.session.commit()
+    return redirect("/food")
+
+# EDIT
 @user_blueprint.route("/users/<id>/edit")
 def edit_user(id):
     user = User.query.get(id)
+    # username = User.name
     return render_template("user/edit.jinja", user=user)
 
-DELETE USER
+# DELETE USER
 @user_blueprint.route("/users/<id>/delete")
 def check(id):
     user = User.query.get(id)
     db.session.delete(user)
     db.session.commit()
-    return redirect("/food", user=user)
+    return redirect("/food")

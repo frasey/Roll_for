@@ -80,12 +80,12 @@ def update_food(id):
 @food_blueprint.route("/food/<id>/edit")
 def edit_food(id):
     food = Food.query.get(id)
-    user = User.query.all()
-    return render_template("food/edit.jinja", food=food, user=user)
+    users = User.query.all()
+    return render_template("food/edit.jinja", food=food, users=users)
 
 # DELETE
 @food_blueprint.route("/food/<id>/delete")
-def check(id):
+def delete_food(id):
     food = Food.query.get(id)
     db.session.delete(food)
     db.session.commit()
