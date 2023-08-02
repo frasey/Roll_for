@@ -28,3 +28,10 @@ def all_user_food(id):
     foods = Food.query.filter_by(user_id = id)
     return render_template("/user/all_food.jinja", user=user, foods=foods)
 
+# DELETE USER
+# @user_blueprint.route("/user/<id>/delete")
+# def check(id):
+#     user = User.query.get(id)
+#     db.session.delete(user)
+#     db.session.commit()
+#     return redirect("/food", user=user)

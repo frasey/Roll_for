@@ -2,7 +2,6 @@ from flask import render_template, redirect, Blueprint, request
 from app import db
 from models.user import User
 from models.food import Food
-from controllers.user_controller import all_user_food
 import random
 
 food_blueprint = Blueprint("/food", __name__)
@@ -13,7 +12,6 @@ def output_random():
     users = User.query.all()
     args = request.args
     user_id = args.get("user")
-    # user = User.query.get(user_id)
     if user_id:
         food = Food.query.filter_by(user_id = user_id)
         meal_names = ["main", "fruit", "nuts", "extra nibble", "sweet"]

@@ -18,13 +18,13 @@
         </div>
         <div>
             <label class="new-form__label" for="categories">Category:</label>
-                <select name="category" id="category">
-                    <option value="main">Main</option>
-                    <option value="fruit">Fruit</option>
-                    <option value="nuts">Nuts</option>
-                    <option value="extra nibble">Extra nibble</option>
-                    <option value="sweet">Sweet</option>
-                </select>
+            <select name="category" id="category">
+                <option value="main">Main</option>
+                <option value="fruit">Fruit</option>
+                <option value="nuts">Nuts</option>
+                <option value="extra nibble">Extra nibble</option>
+                <option value="sweet">Sweet</option>
+            </select>
         </div>
         <div>
             <h5 class="ingredients_exp">Optional: Add ingredients for your shopping list </h5>
@@ -36,8 +36,4 @@
 
 </section>
 
-    {% for food in foods %}
-        {{ food.name}}: {{ food.category}}
-    {% endfor %}
-    
 {% endblock content %}

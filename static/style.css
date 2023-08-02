@@ -302,6 +302,19 @@ a:visited {
   font-weight: bold;
 }
 
+.user-delete-btn {
+  height: 38px;
+  width: 60px;
+  line-height: 38px;
+  background-color: #E85545;
+  color:#29282A;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  display: inline-block;
+  text-align: center;
+}
+
 
 /* tips page */
 .tips__title {

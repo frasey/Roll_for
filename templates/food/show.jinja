@@ -1,37 +1,36 @@
 {% extends 'base.jinja' %} {% block content %}
 
-
 <div class="container">
     <h1 class="food-list__title">All items</h1>
     <ul class="food-list">
         <li class="food-list__items">
             <h2 class="main-list__subtitle">Main</h2>
             {% for food in foods if food.category == "main" %}
-            <a class="user-list__link" href="/food/{{ food.id }}/edit">{{ food.name }},</a>
+                <a class="user-list__link" href="/food/{{ food.id }}/edit">{{ food.name }},</a>
             {% endfor %}
         </li>
         <li class="food-list__items">
             <h2 class="main-list__subtitle">Fruit</h2>
             {% for food in foods if food.category == "fruit" %}
-            <a class="user-list__link" href="/food/{{ food.id }}/edit">{{ food.name }},</a>
+                <a class="user-list__link" href="/food/{{ food.id }}/edit">{{ food.name }},</a>
             {% endfor %}
         </li>
         <li class="food-list__items">
             <h2 class="main-list__subtitle">Nuts</h2>
             {% for food in foods if food.category == "nuts" %}
-            <a class="user-list__link" href="/food/{{ food.id }}/edit">{{ food.name }},</a>
+                <a class="user-list__link" href="/food/{{ food.id }}/edit">{{ food.name }},</a>
             {% endfor %}
         </li>
         <li class="food-list__items">
             <h2 class="main-list__subtitle">Nibbles</h2>
             {% for food in foods if food.category == "extra nibble" %}
-            <a class="user-list__link" href="/food/{{ food.id }}/edit">{{ food.name }},</a>
+                <a class="user-list__link" href="/food/{{ food.id }}/edit">{{ food.name }},</a>
             {% endfor %}
         </li>
         <li class="food-list__items">
             <h2 class="main-list__subtitle">Sweet</h2>
             {% for food in foods if food.category == "sweet" %}
-            <a class="user-list__link" href="/food/{{ food.id }}/edit">{{ food.name }},</a>
+                <a class="user-list__link" href="/food/{{ food.id }}/edit">{{ food.name }},</a>
             {% endfor %}
         </li>
     </ul>
