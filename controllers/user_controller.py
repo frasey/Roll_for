@@ -55,6 +55,10 @@ def edit_user(id):
 @user_blueprint.route("/users/<id>/delete")
 def check(id):
     user = User.query.get(id)
+
+    # food = Food.query.filter_by(user_id = id)
+
+    # db.session.delete(food)
     db.session.delete(user)
     db.session.commit()
     return redirect("/food")
