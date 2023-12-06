@@ -19,13 +19,13 @@ pip3 install python-dotenv
 pip3 install flask-migrate
 pip3 install psychopg2
 
-createdb workout
+createdb roll_for
 flask db init
 flask run seed
 ```
 
 In app.py:
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://<your_postgres_user>@localhost:5432/workout"
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://<your_postgres_user>@localhost:5432/roll_for"
 
 
 ## To run:
