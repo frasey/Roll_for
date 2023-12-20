@@ -30,12 +30,13 @@ def all_user_food(id):
 
 # UPDATE USER
 @user_blueprint.route("/users/<id>", methods=["POST"])
-def update_user():
+def update_user(id):
     name = request.form["name"]
 
-    user = User.query.get(name)
+    user = User.query.get(id)
 
-    db.session.add(user)
+    user.user_id = id
+    user.name = name
     db.session.commit()
     return redirect("/food")
 
