@@ -23,9 +23,7 @@ This was my first solo project and my first Python project. I had the idea of cr
 
 |          |           |           |
 | -------- | --------- | --------- |
-| <img width="340" alt="Homepage (no user)" src="https://github.com/frasey/Roll_for/assets/129194569/aca500e1-f0d5-417c-b43c-fd2f4ae86f52"> |
- <img width="340" alt="Homepage (user)" src="https://github.com/frasey/Roll_for/assets/129194569/cc412034-782c-487d-ba71-4e43f0b897f7">
-| <img width="340" alt="User roll" src="https://github.com/frasey/Roll_for/assets/129194569/1e88e6bb-340b-407a-a09f-2392cebcd930"> |
+| <img width="340" alt="Homepage (no user)" src="https://github.com/frasey/Roll_for/assets/129194569/aca500e1-f0d5-417c-b43c-fd2f4ae86f52"> | <img width="340" alt="Homepage (user)" src="https://github.com/frasey/Roll_for/assets/129194569/cc412034-782c-487d-ba71-4e43f0b897f7"> | <img width="340" alt="User roll" src="https://github.com/frasey/Roll_for/assets/129194569/1e88e6bb-340b-407a-a09f-2392cebcd930"> |
 | Homepage (no user) | Homepage with user | User roll |
 
 
