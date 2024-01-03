@@ -1,7 +1,9 @@
 # Roll_for
-Using Python, Flask and SQLAlchemy to create a working CRUD app using restful routes. This app is intended to support organisation and disordered eating.
+Using Python, Flask and SQLAlchemy to create a working CRUD app using restful routes. This app is intended to support organisation and disordered eating. 
 
 I created an app in which different users can input food preferences, and a random assortment of their options will be generated as a meal plan for a bento-style lunch, along with a shopping list.
+
+The title of this project is 'Roll_For [lunch]'. I focused on lunch as a meal that I always struggle to organise for, but the idea is that the app could be used for any and all meal planning that someone may find difficult. 
 
 Keeping accessibility in mind, the main functionality of this app is on the home page and a darker colour scheme used.
 
@@ -18,6 +20,19 @@ This was my first solo project and my first Python project. I had the idea of cr
 
 
 ## Project screenshots
+
+|          |           |           |
+| -------- | --------- | --------- |
+| <img width="340" alt="Homepage (no user)" src="https://github.com/frasey/Roll_for/assets/129194569/aca500e1-f0d5-417c-b43c-fd2f4ae86f52"> |
+ <img width="1440" alt="Homepage (user)" src="https://github.com/frasey/Roll_for/assets/129194569/cc412034-782c-487d-ba71-4e43f0b897f7">
+| <img width="1440" alt="User roll" src="https://github.com/frasey/Roll_for/assets/129194569/1e88e6bb-340b-407a-a09f-2392cebcd930"> |
+| Homepage (no user) | Homepage with user | User roll |
+| <img width="1440" alt="User food list" src="https://github.com/frasey/Roll_for/assets/129194569/402a88d7-c44d-441c-b2a1-0b2f7308a466"> | <img width="1440" alt="Add food" src="https://github.com/frasey/Roll_for/assets/129194569/2d1c191d-598e-468d-94b5-21353a496f87">
+| <img width="1440" alt="Edit-delete food" src="https://github.com/frasey/Roll_for/assets/129194569/f57badf8-2b67-459d-adbd-1493f7d6e951"> |
+| User food list | Add food | Edit/delete food |
+| <img width="1440" alt="Current users" src="https://github.com/frasey/Roll_for/assets/129194569/adccda13-2524-4403-a484-6373bcdb698e"> | <img width="1440" alt="New user" src="https://github.com/frasey/Roll_for/assets/129194569/b7c9aa5c-b626-4f73-a557-497618cc644a"> | <img width="1440" alt="Update - delete user" src="https://github.com/frasey/Roll_for/assets/129194569/dce00f0b-38c8-4f32-b34c-110942ed1306"> |
+| Current users | New user | Edit/delete user |
+
 
 ## Dependencies:
 ```
